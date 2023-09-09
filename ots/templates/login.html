@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+
+{% block title %} ots-login form  {% endblock title %}
+
+{% block top %} 
+<a href="{% url 'ots:Registrationform' %}">Signup</a>
+
+
+{% endblock top %}
+{% block content %}
+<div class="all-forms">
+    {% if loginError%}
+    <div class="alert alert-danger" role="alert">
+        {{loginError}}
+    </div>
+    {% endif %}
+    <form action="{% url 'ots:login' %}" method="post">
+        {% csrf_token %}
+        <div class="form-unit">
+            <label for="username"> username</label>
+            <input type="text" name="username">
+
+        </div>
+        <div class="form-unit">
+            <label for="password"> password</label>
+            <input type="password" name="password">
+            
+        </div>
+        <div class="form-unit">
+            <input type="submit" value="Login">
+            <input type="reset" value="Clear">
+
+            
+        </div>
+
+    </form>
+    New User <a href="{% url 'ots:Registrationform' %}">click here</a>
+    
+
+</div>
+{% endblock %}

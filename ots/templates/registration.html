@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+
+{% block title %} ots Registrationstatus{% endblock title %}
+
+{% block top %} 
+<a href="{% url 'ots:Registrationform' %}">Signup</a>
+<a href="{% url 'ots:login' %}">Login</a>
+
+{% endblock top %}
+{% block content %}
+{% if userStatus == 1%}
+
+    <div class="userStatus">
+        Sorry, username Alerady exists, please try different username. 
+         <a href="{% url 'ots:Registrationform' %}">back to candidate Registrationform</a> 
+        </div>
+{% elif userStatus == 2%}
+
+    <div class="userStatus">
+        congratulations user created successfully
+         <a href="{% url 'ots:login' %}">login</a> 
+        
+        </div>
+{% elif userStatus == 3%}
+
+    <div class="userStatus">
+        Opps!!  improper reguest 
+         <a href="{% url 'ots:Registrationform' %}">back to candidate Registrationform</a> 
+        </div>
+{%endif%}
+{% endblock %}
+
+
