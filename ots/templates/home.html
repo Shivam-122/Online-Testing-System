@@ -9,6 +9,10 @@
 {% endblock top %}
 {% block content %}
 <h1>welcome {{request.session.name}},to your home page</h1>
+<p>
+    <h3>It would help  a lot to understand how the problem comes in exam </h3>
+    <h3>It would help you to praticising your skills</h3>
+</p> 
 <div class="button-link">
     <a href="{%url 'ots:testpaper'%}?n=1"> test of 1 question</a>
 </div>
