@@ -8,6 +8,9 @@ class Candidate(models.Model):
     name=models.CharField(null=False,max_length=30)
     test_attempted=models.IntegerField(default=0)
     points=models.FloatField(default=0.0)
+    phone_number=models.IntegerField(default=0)
+    def __str__(self):
+        return self.name
 
 class Question(models.Model):
     qid=models.BigAutoField(primary_key=True,auto_created=True)
@@ -20,6 +23,7 @@ class Question(models.Model):
 
 class Result(models.Model):
     resultid=models.BigAutoField(primary_key=True,auto_created=True)
+    
     username=models.ForeignKey(Candidate,on_delete=models.CASCADE)
     date=models.DateField(auto_now=True)
     time=models.TimeField(auto_now=True)
@@ -27,6 +31,9 @@ class Result(models.Model):
     right=models.IntegerField()
     wrong=models.IntegerField()
     points=models.FloatField()
+
+    
+    
     
 
 

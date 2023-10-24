@@ -1,4 +1,5 @@
 *{
+    /* if we want to apply properties to whole page then we use * { } */
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .top{
@@ -6,6 +7,7 @@
     background-color:#AFD275;
     margin-bottom:20px;
     padding:10px;
+    display: flex;
 }
 .top div.sitename{
     display:inline-block;
@@ -27,7 +29,7 @@
     width:70%;
     margin-left:auto;
     margin-right:auto;
-
+    
 }
 table{
     width:90%;
@@ -50,6 +52,9 @@ table td{
 span.special
 {
     color:#456705;
-    font-weight: bold;
-    
+    font-weight: bold;  
 }
+
+
+
+

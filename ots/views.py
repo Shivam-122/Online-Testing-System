@@ -25,6 +25,7 @@ def candidateRegistration(request):
             candidate.username=username 
             candidate.password=request.POST['password']
             candidate.name=request.POST['name']
+            candidate.phone_number=request.POST['phone number']
             candidate.save()
             userStatus=2
     else:

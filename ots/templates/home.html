@@ -4,7 +4,19 @@
 
 {% block top %} 
 <a href="{% url 'ots:home' %}">Home</a>
+
 <a href="{% url 'ots:logout' %}">Logout</a>
+<div class="menu"><div class="menu-icon">
+    <a href=""><i class="fa-solid fa-bars"></i></a>
+        <select name="" id="">
+            <option value="">a</option>
+            <option value="">b</option>
+            <option value="">c</option>
+            <option value="">d</option>
+            <option value="">r</option>
+        </select>
+    
+</div>
 
 {% endblock top %}
 {% block content %}
@@ -26,4 +38,8 @@
     <a href="{%url 'ots:testHistory'%}">testhistory</a>
 </div>
 {% endblock %}
+{% block footer%}
+    <a href="www.facebook.com">facebook</a>
+    <a href="www.instagram.com">instagram</a>
+{% endblock%}
 

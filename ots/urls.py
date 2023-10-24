@@ -3,7 +3,7 @@ from ots.views import *
 app_name = 'ots'
 
 urlpatterns = [
-    path('',welcome),
+    path('welcome',welcome),
     path('new-candidate',candidateRegistrationform,name='Registrationform'),
     path('store-candidate',candidateRegistration,name='storecandidate'),
     path('login',loginView,name='login'),
